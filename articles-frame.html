@@ -1,0 +1,18 @@
+<div class="container-fluid" ng-controller="ArticleController as articleCtrl">
+  <div class="container col-md-8">
+
+    <h2 ng-show="articles == null">No current articles.</h2>
+
+    <!-- Repeated Articles -->
+    <div ng-repeat="article in articles">
+      <!-- Article -->
+      <article-body></article-body>
+      <!-- Article Edit Form -->
+      <article-edit></article-edit>
+    </div>
+
+  </div>
+
+  <!-- Article Form -->
+  <article-form></article-form>
+</div>

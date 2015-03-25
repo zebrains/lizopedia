@@ -1,0 +1,9 @@
+<div ng-hide="article.editing">
+  <form ng-submit="editArticle($index)">
+    <button type="submit" class="btn btn-primary" ng-hide="isEditing">Edit</button>
+  </form>
+  <blockquote style="border-bottom: 1px solid #ccc;">
+    <h1>{{article.title}}</h1>
+    <p>{{article.content}}</p>
+  </blockquote>
+</div>
