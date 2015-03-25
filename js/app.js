@@ -1,5 +1,6 @@
 var lizopedia = angular.module("lizopedia", []);
 
+//Directives
 
 lizopedia.directive("topBar", function(){
   return {
@@ -49,6 +50,7 @@ lizopedia.directive("articleEdit", function(){
   };
 });
 
+//Controller
 lizopedia.controller("ArticleController", function($scope, $log){
 
     $scope.isEditing = false;
