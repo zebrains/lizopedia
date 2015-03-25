@@ -75,17 +75,23 @@ lizopedia.controller("ArticleController", function($scope, $log){
       this.article = {};
     };
 
-    $scope.editArticle = function(index){
-      $scope.editArticle.title = $scope.articles[index].title;
-      $scope.editArticle.content = $scope.articles[index].content;
-      $scope.articles[index].editing = true;
+    $scope.editArticle = function(article){
+      // Some aliasing for ease of reading.
+      var articles = $scope.articles;
+
+      $scope.editArticle.title = articles[articles.indexOf(article)].title;
+      $scope.editArticle.content =  articles[articles.indexOf(article)].content;
+      articles[articles.indexOf(article)].editing = true;
       $scope.isEditing = true;
     };
 
-    $scope.submitArticleChanges = function(index){
-      $scope.articles[index].title = $scope.editArticle.title;
-      $scope.articles[index].content = $scope.editArticle.content;
-      $scope.articles[index].editing = false;
+    $scope.submitArticleChanges = function(article){
+      // Some aliasing for ease of reading.
+      var articles = $scope.articles;
+
+      articles[articles.indexOf(article)].title = $scope.editArticle.title;
+      articles[articles.indexOf(article)].content = $scope.editArticle.content;
+      articles[articles.indexOf(article)].editing = false;
       $scope.isEditing = false;
     };
 
