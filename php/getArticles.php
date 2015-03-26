@@ -23,8 +23,9 @@ if($result = mysqli_query($conn, $query)){
     $row['editing'] = false;
     $data[] = $row;
   }
+    echo json_encode($data);
 
-  echo json_encode($data);
+
 } else {
   print("blah!");
 }
