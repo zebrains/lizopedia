@@ -1,7 +1,7 @@
 <div class="container-fluid" ng-controller="ArticleController as articleCtrl">
   <div class="container col-md-8">
 
-    <h2 ng-show="articles == null">No current articles.</h2>
+    <h2 ng-show="articles === undefined || articles.length == 0">No current articles. </h2>
 
     <!-- Repeated Articles -->
     <div ng-repeat="article in articles | orderBy: 'title'">
