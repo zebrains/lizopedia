@@ -4,7 +4,7 @@ My girlfriend says some really odd stuff. For her birthday I thought it would be
 
 ## Installation
 
-#Copy the repo to your webserver.
-#Modify all php and sql directory files to use your mysql.
-#Run ./sql/install.php to setup the DB.
-#Open the root directory in any browser.
+1. Copy the repo to your webserver.
+2. Modify all php and sql directory files to use your mysql.
+3. #Run ./sql/install.php to setup the DB.
+4. Open the root directory in any browser.
