@@ -63,6 +63,7 @@ lizopedia.controller("ArticleController", function($scope, $http){
       .success(function(response) {
         $scope.articles = response;
       });
+
 /*    $scope.articles = [
       {
         "title": "Bonacles",
