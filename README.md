@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/zebrains/lizopedia/badges/gpa.svg)](https://codeclimate.com/github/zebrains/lizopedia)
+
 # Lizopedia
 
 My girlfriend says some really odd stuff. For her birthday I thought it would be an awesome idea to make sure that we could store these gems on our local network. This was the application that was made.
