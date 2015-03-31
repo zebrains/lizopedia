@@ -12,9 +12,8 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-
-$title = $_GET['title'];
-$content = $_GET['content'];
+$title = filter_input(INPUT_GET, ‘title’, FILTER_SANITIZE_STRING);
+$content = filter_input(INPUT_GET, ‘content’, FILTER_SANITIZE_STRING);
 
 $query = "INSERT INTO `articles` (title, content) VALUES ('$title', '$content')";
 

@@ -3,18 +3,18 @@
 $server   = "localhost";
 $user     = "root";
 $pass     = "";
-$db       = "lizopedia";
+$database       = "lizopedia";
 
-$conn = mysqli_connect($server, $user, $pass, $db);
+$conn = mysqli_connect($server, $user, $pass, $database);
 
 // Check connection
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    print "Connection failed: " . mysqli_connect_error();
 }
 
-$id = $_GET['id'];
-$title = $_GET['title'];
-$content = $_GET['content'];
+$id = filter_input(INPUT_GET, ‘id’, FILTER_SANITIZE_STRING);
+$title = filter_input(INPUT_GET, ‘title’, FILTER_SANITIZE_STRING);
+$content = filter_input(INPUT_GET, ‘content’, FILTER_SANITIZE_STRING);
 
 $query = "UPDATE `articles` SET title='$title', content='$content' WHERE id=$id;";
 
@@ -26,5 +26,3 @@ if ($conn->query($query) === TRUE) {
 }
 
 $conn->close();
-
-?>
