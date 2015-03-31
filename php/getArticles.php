@@ -3,13 +3,13 @@
 $server   = "localhost";
 $user     = "root";
 $pass     = "";
-$db       = "lizopedia";
+$database       = "lizopedia";
 
-$conn = mysqli_connect($server, $user, $pass, $db);
+$conn = mysqli_connect($server, $user, $pass, $database);
 
 // Check connection
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    print "Connection failed: " . mysqli_connect_error());
 }
 
 $query = "Select id, title, content FROM `articles` ORDER BY 'title' ASC;";
@@ -32,5 +32,3 @@ if($result = mysqli_query($conn, $query)){
 
 
 $conn->close();
-
-?>
