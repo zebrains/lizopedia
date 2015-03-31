@@ -8,7 +8,7 @@ $conn = mysqli_connect($server, $user, $pass);
 
 // Check connection
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    print "Connection failed: " . mysqli_connect_error());
 }
 
 $query = <<<SQL
@@ -31,5 +31,3 @@ if ($conn->multi_query($query) === TRUE) {
 }
 
 $conn->close();
-
-?>
