@@ -3,9 +3,9 @@
 $server   = "localhost";
 $user     = "root";
 $pass     = "";
-$db       = "lizopedia";
+$database       = "lizopedia";
 
-$conn = mysqli_connect($server, $user, $pass, $db);
+$conn = mysqli_connect($server, $user, $pass, $database);
 
 // Check connection
 if (!$conn) {
@@ -24,5 +24,3 @@ if ($conn->query($query) === TRUE) {
 }
 
 $conn->close();
-
-?>
